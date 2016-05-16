@@ -51,3 +51,19 @@ p {
         font-weight: bold;
     }
 }
+
+#dashboard{
+    display: block;
+    background-color: blue;
+    #resources{
+        display: inline-block;
+        background-color: green;
+        width: 15%;
+    }
+
+    #chart_div{
+        display: inline-block;
+        width: 900px; 
+        height: 500px;
+    }
+}

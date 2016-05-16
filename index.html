@@ -4,13 +4,13 @@
 <head>
     <title>Poloniex Trader</title>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menudrop.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="http://backbonejs.org/backbone-min.js"></script>
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/app.js"></script>   
 </head>
 
 <body>
@@ -20,11 +20,16 @@
     <main>
         <div id="data">
         <div class="dropdown">
-            <button class="dropbtn" id="BTC_ETH">BTC_ETH</button>
+            <button class="dropbtn" href="#select" id="select">Select</button>
             <div class="dropdown-content">
-                <a id="#BTC_LTC">BTC_LTC</a>
-                <a id="#BTC_MAID">BTC_MAID</a>
-                <a id="#BTC_FCT">BTC_FCT</a>
+                <a href="#USD_ETHD" id="USD_ETHD">USD_ETHD</a>
+                <a href="#ETHD_BTC" id="ETHD_BTC">ETHD_BTC</a>
+                <a href="#ETHD_LTC" id="ETHD_LTC">ETHD_LTC</a>
+                <a href="#ETHD_ETH" id="ETHD_ETH">ETHD_ETH</a>
+                <a href="#ETHD_MAID" id="ETHD_MAID">ETHD_MAID</a>
+                <a href="#ETHD_BTS" id="ETHD_BTS">ETHD_BTS</a>
+                <a href="#ETHD_FCT" id="ETHD_FCT">ETHD_FCT</a>
+                <a href="#ETHD_XMR" id="ETHD_XMR">ETHD_XMR</a>
             </div>
         </div>
         <h4>Current Price:</h4>
@@ -43,10 +48,20 @@
             <button id="buy">+ Buy</button>
             <button id="sell">- Sell</button>
         </div>
+        <div id="dashboard">
         <div id="resources">
-            <h3>Cryptocurrencies</h3>
+            <h4>Cryptocurrencies</h4>
+            <p>ETHD: <span id="ethd-wealth">---</span></p>
             <p>BTC: <span id="btc-wealth">---</span></p>
+            <p>LTC: <span id="ltc-wealth">---</span></p>
             <p>ETH: <span id="eth-wealth">---</span></p>
+            <p>MAID: <span id="maid-wealth">---</span></p>
+            <p>BTS: <span id="bts-wealth">---</span></p>
+            <p>FCT: <span id="fct-wealth">---</span></p>
+            <p>XMR: <span id="xmr-wealth">---</span></p>
+        </div>
+        
+            <div id="chart_div"></div>
         </div>
     </main>
 </body>
