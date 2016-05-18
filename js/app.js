@@ -10,6 +10,7 @@ window.addEventListener('load', function () {
     var accountManager = require('./model/account');
     var balance = require('./view/balance');
     var chart = require('./view/chart');
+    var firebase = require('./view/firebase');
     var menu = require('./view/menu')
     var transact = require('./view/transact');
     var router = require('./router')
@@ -52,7 +53,15 @@ window.addEventListener('load', function () {
         el: document.getElementById('data'),
     });
     
-    var charts = new chart({
+    var firebases = new firebase({
+        model: manager,
+    });
+    
+    var firebases = new firebase({
+        model: manager,
+    });
+    
+     var charts = new chart({
         model: manager,
     });
     charts.render();

@@ -20,35 +20,39 @@ module.exports = function (callBack) {
 //                    console.log(args);
 //            }
             function tickerEvent (args,kwargs) {
-//                    console.log(args);
+    
                 if (args[0]==="USDT_BTC"){
                         var time = new Date();
                         var year = refBTC.child("Year" + time.getFullYear());
-                        var month = year.child("Month" + time.getMonth().slice(-2));
-                        var day = month.child("Day" + time.getDay().slice(-2));
-                        var hours = day.child("Hours" + time.getHours().slice(-2));
-                        var minutes = hours.child("Minutes" + time.getMinutes().slice(-2));
+                        var month = year.child("Month" + time.getMonth());
+                        var day = month.child("Day" + time.getDate());
+                        var hours = day.child("Hours" + time.getHours());
+                        var minutes = hours.child("Minutes" + time.getMinutes());
+
                             minutes.set({
                                 id: Date.now(),
                                 name: 'Bitcoin Data',
                                 data: args,
                             });
+
                         callBack.model.set('btcP', parseFloat(args[1]));
                         callBack.model.set('btcPH', parseFloat(args[8]));
                         callBack.model.set('btcPL', parseFloat(args[9]));
                         callBack.model.set('btcPP', parseFloat(Math.round(args[4]*1000000)/10000));
                         callBack.model.set('btcPV', parseFloat(args[5]));
+
                     
                       if (callBack.model.get('pair')==='btc'){
                           callBack.callBack(args, 'btcP');
                       }
+
                 };
                 
                 if (args[0]==="BTC_LTC"){
                         var time = new Date();
                         var year = refLTC.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({
@@ -71,7 +75,7 @@ module.exports = function (callBack) {
                         var time = new Date();
                         var year = refETH.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({
@@ -94,7 +98,7 @@ module.exports = function (callBack) {
                         var time = new Date();
                         var year = refMAID.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({
@@ -117,7 +121,7 @@ module.exports = function (callBack) {
                         var time = new Date();
                         var year = refBTS.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({
@@ -140,7 +144,7 @@ module.exports = function (callBack) {
                         var time = new Date();
                         var year = refFCT.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({
@@ -163,7 +167,7 @@ module.exports = function (callBack) {
                         var time = new Date();
                         var year = refXMR.child("Year" + time.getFullYear());
                         var month = year.child("Month" + time.getMonth());
-                        var day = month.child("Day" + time.getDay());
+                        var day = month.child("Day" + time.getDate());
                         var hours = day.child("Hours" + time.getHours());
                         var minutes = hours.child("Minutes" + time.getMinutes());
                             minutes.set({

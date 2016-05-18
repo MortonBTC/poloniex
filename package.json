@@ -12,6 +12,7 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
-    "chart.js": "^2.0.2"
+    "chart.js": "^2.0.2",
+    "request": "^2.72.0"
   }
 }

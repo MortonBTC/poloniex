@@ -6,7 +6,6 @@ module.exports = Backbone.View.extend({
         this.model.on('change', this.render, this);
     },
     render: function () {
-        document.getElementById('ethd-wealth').textContent = this.model.get('ethd');
         document.getElementById('btc-wealth').textContent = this.model.get('btc');
         document.getElementById('ltc-wealth').textContent = this.model.get('ltc');
         document.getElementById('eth-wealth').textContent = this.model.get('eth');

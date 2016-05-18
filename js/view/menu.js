@@ -1,7 +1,6 @@
 
 module.exports = Backbone.View.extend({
     events: {
-        "click #USD_ETHD": "menuUSD_ETHD",
         "click #ETHD_BTC": "menuETHD_BTC", 
         "click #ETHD_LTC": "menuETHD_LTC",  
         "click #ETHD_ETH": "menuETHD_ETH", 
@@ -9,9 +8,6 @@ module.exports = Backbone.View.extend({
         "click #ETHD_BTS": "menuETHD_BTS", 
         "click #ETHD_FCT": "menuETHD_FCT", 
         "click #ETHD_XMR": "menuETHD_XMR", 
-    },
-    menuUSD_ETHD: function () {
-        document.getElementById('select').innerHTML = 'USD_ETHD';
     },
     menuETHD_BTC: function () {
         document.getElementById('select').innerHTML = 'ETHD_BTC';

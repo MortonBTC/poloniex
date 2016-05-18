@@ -2,8 +2,7 @@
 <html>
 
 <head>
-    <title>Poloniex Trader</title>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" type="text/css">
+    <title>Blockchain Exchange</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menudrop.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -15,14 +14,13 @@
 
 <body>
     <header>
-        <h1>Poloniex Trader</h1>
+        <h1>Blockchain Exchange</h1>
     </header>
     <main>
         <div id="data">
         <div class="dropdown">
             <button class="dropbtn" href="#select" id="select">Select</button>
             <div class="dropdown-content">
-                <a href="#USD_ETHD" id="USD_ETHD">USD_ETHD</a>
                 <a href="#ETHD_BTC" id="ETHD_BTC">ETHD_BTC</a>
                 <a href="#ETHD_LTC" id="ETHD_LTC">ETHD_LTC</a>
                 <a href="#ETHD_ETH" id="ETHD_ETH">ETHD_ETH</a>
@@ -33,15 +31,15 @@
             </div>
         </div>
         <h4>Current Price:</h4>
-        <p id="price">...</p><span class="currency"> BTC</span>
+        <p id="price">N/A</p><span class="currency"> BTC</span>
         <h4>24 Hour High:</h4>
-        <p id="high">...</p><span class="currency"> BTC</span>
+        <p id="high">N/A</p><span class="currency"> BTC</span>
         <h4>24 Hour Low:</h4>
-        <p id="low">...</p><span class="currency"> BTC</span>
+        <p id="low">N/A</p><span class="currency"> BTC</span>
         <h4>24 Hour Percent Change:</h4>
-        <p id="change">...</p><span class="currency"> %</span>
+        <p id="change">N/A</p><span class="currency"> %</span>
         <h4>Volume:</h4>
-        <p id="volumeBTC">...</p><span class="currency"> BTC</span>
+        <p id="volumeBTC">N/A</p><span class="currency"> BTC</span>
         </div>
         
         <div class="controls" id="controls">
@@ -50,8 +48,7 @@
         </div>
         <div id="dashboard">
         <div id="resources">
-            <h4>Cryptocurrencies</h4>
-            <p>ETHD: <span id="ethd-wealth">---</span></p>
+            <h3>Cryptocurrencies</h3>
             <p>BTC: <span id="btc-wealth">---</span></p>
             <p>LTC: <span id="ltc-wealth">---</span></p>
             <p>ETH: <span id="eth-wealth">---</span></p>
