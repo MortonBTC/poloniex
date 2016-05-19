@@ -25,14 +25,9 @@ h1 {
     font-size: 2.3em;
 }
 
-h2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: normal;
-    color: #bbb;
-}
-
 h3 {
     font-size: 1.8em;
+    text-decoration: underline;
 }
 
 p {
@@ -55,13 +50,17 @@ p {
 
 #dashboard{
     display: block;
+    z-index: 1;
     #resources{
+        position: relative;
         display: inline-block;
+        top: 50%;
         width: 15%;
     }
 
     #chart_div{
-        display: inline-block;
+        position: absolute;
+        display: inline;
         width: 900px; 
         height: 500px;
     }

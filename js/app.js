@@ -67,5 +67,5 @@ window.addEventListener('load', function () {
     charts.render();
     
     Backbone.history.start();
-    route.navigate('ETHD_Dollar');
+    route.navigate('USD_BTC');
 });

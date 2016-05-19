@@ -1,33 +1,33 @@
 
 module.exports = Backbone.View.extend({
     events: {
-        "click #ETHD_BTC": "menuETHD_BTC", 
-        "click #ETHD_LTC": "menuETHD_LTC",  
-        "click #ETHD_ETH": "menuETHD_ETH", 
-        "click #ETHD_MAID": "menuETHD_MAID", 
-        "click #ETHD_BTS": "menuETHD_BTS", 
-        "click #ETHD_FCT": "menuETHD_FCT", 
-        "click #ETHD_XMR": "menuETHD_XMR", 
+        "click #USD_BTC": "menuUSD_BTC", 
+        "click #BTC_LTC": "menuBTC_LTC",  
+        "click #BTC_ETH": "menuBTC_ETH", 
+        "click #BTC_MAID": "menuBTC_MAID", 
+        "click #BTC_BTS": "menuBTC_BTS", 
+        "click #BTC_FCT": "menuBTC_FCT", 
+        "click #BTC_XMR": "menuBTC_XMR", 
     },
-    menuETHD_BTC: function () {
-        document.getElementById('select').innerHTML = 'ETHD_BTC';
+    menuUSD_BTC: function () {
+        document.getElementById('select').innerHTML = 'USD_BTC';
     },
-    menuETHD_LTC: function () {
-        document.getElementById('select').innerHTML = 'ETHD_LTC';
+    menuBTC_LTC: function () {
+        document.getElementById('select').innerHTML = 'BTC_LTC';
     },
-    menuETHD_ETH: function () {
-        document.getElementById('select').innerHTML = 'ETHD_ETH';
+    menuBTC_ETH: function () {
+        document.getElementById('select').innerHTML = 'BTC_ETH';
     },
-    menuETHD_MAID: function () {
-        document.getElementById('select').innerHTML = 'ETHD_MAID';
+    menuBTC_MAID: function () {
+        document.getElementById('select').innerHTML = 'BTC_MAID';
     },
-    menuETHD_BTS: function () {
-        document.getElementById('select').innerHTML = 'ETHD_BTS';
+    menuBTC_BTS: function () {
+        document.getElementById('select').innerHTML = 'BTC_BTS';
     },
-    menuETHD_FCT: function () {
-        document.getElementById('select').innerHTML = 'ETHD_FCT';
+    menuBTC_FCT: function () {
+        document.getElementById('select').innerHTML = 'BTC_FCT';
     },
-    menuETHD_XMR: function () {
-        document.getElementById('select').innerHTML = 'ETHD_XMR';
+    menuBTC_XMR: function () {
+        document.getElementById('select').innerHTML = 'BTC_XMR';
     },
 });

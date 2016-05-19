@@ -12,6 +12,8 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-bottom: 1em;
+    z-index: 2;
 }
 
 /* Dropdown Content (Hidden by Default) */

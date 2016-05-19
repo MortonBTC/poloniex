@@ -4,14 +4,13 @@ module.exports = Backbone.Router.extend({
     },
     
   routes: {
-    "USD_ETHD": "USD_ETHD",
-    "ETHD_BTC": "ETHD_BTC", 
-    "ETHD_LTC": "ETHD_LTC",  
-    "ETHD_ETH": "ETHD_ETH", 
-    "ETHD_MAID": "ETHD_MAID", 
-    "ETHD_BTS": "ETHD_BTS", 
-    "ETHD_FCT": "ETHD_FCT", 
-    "ETHD_XMR": "ETHD_XMR", 
+    "USD_BTC": "USD_BTC", 
+    "BTC_LTC": "BTC_LTC",  
+    "BTC_ETH": "BTC_ETH", 
+    "BTC_MAID": "BTC_MAID", 
+    "BTC_BTS": "BTC_BTS", 
+    "BTC_FCT": "BTC_FCT", 
+    "BTC_XMR": "BTC_XMR", 
     
   },
   Change: function () {
@@ -27,42 +26,37 @@ module.exports = Backbone.Router.extend({
     volumeBTC.textContent = this.model.get(this.model.get('pair')+"PV")
   },
     
-  USD_ETHD: function() {
-    this.model.set('pair', 'ethd');
-      this.Change();
-  },
-    
-  ETHD_BTC: function() {
+  USD_BTC: function() {
     this.model.set('pair', 'btc');
       this.Change();
   },
       
-  ETHD_LTC: function() {
+  BTC_LTC: function() {
     this.model.set('pair', 'ltc');
       this.Change();
   },
     
-  ETHD_ETH: function() {
+  BTC_ETH: function() {
     this.model.set('pair', 'eth');
       this.Change();
   },
     
-  ETHD_MAID: function() {
+  BTC_MAID: function() {
     this.model.set('pair', 'maid');
       this.Change();
   },
     
-  ETHD_BTS: function() {
+  BTC_BTS: function() {
     this.model.set('pair', 'bts');
       this.Change();
   },
     
-  ETHD_FCT: function() {
+  BTC_FCT: function() {
     this.model.set('pair', 'fct');
       this.Change();
   },
     
-  ETHD_XMR: function() {
+  BTC_XMR: function() {
     this.model.set('pair', 'xmr');
       this.Change();
   },

@@ -344,12 +344,12 @@ module.exports = Backbone.Model.extend({
     buy: function () {
         console.log(this.get('pair'));
         this.set(this.get('pair'), this.get(this.get('pair')) + 1);
-        this.set('btc', Math.round(this.get('btc') - this.get('price')*100000000)/100000000);
+        this.set('btc', Math.round((this.get('btc') - this.get('price'))*1000000000)/1000000000);
     },
     
     sell: function () {
         console.log(this.get('pair'));
         this.set(this.get('pair'), this.get(this.get('pair')) - 1);
-        this.set('btc', Math.round(this.get('btc') + this.get('price')*100000000)/100000000);
+        this.set('btc', Math.round((this.get('btc') + this.get('price'))*1000000000)/1000000000);
     },
 });

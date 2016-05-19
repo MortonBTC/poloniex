@@ -1,7 +1,6 @@
 module.exports = function (callBack) {
     var autobahn = require('autobahn');
     var Firebase = require('firebase');
-    var refETHD = new Firebase("https://poloniextrader.firebaseio.com/Etherdollar");
     var refBTC = new Firebase("https://poloniextrader.firebaseio.com/Bitcoin");
     var refLTC = new Firebase("https://poloniextrader.firebaseio.com/Litecoin");
     var refETH = new Firebase("https://poloniextrader.firebaseio.com/Ethereum");
@@ -138,6 +137,12 @@ module.exports = function (callBack) {
                       if (callBack.model.get('pair')==='bts'){
                           callBack.callBack(args, 'btsP');
                       }
+                    
+                      console.log([callBack.model.get('btsP'),
+                        callBack.model.get('btsPH'),
+                        callBack.model.get('btsPL'),
+                        callBack.model.get('btsPP'),
+                        callBack.model.get('btsPV')])
                 };
                     
                 if (args[0]==="BTC_FCT"){
